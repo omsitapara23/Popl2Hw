@@ -38,6 +38,7 @@ int main() {
 	
 
 	cout << "Time for parallel  :" << chrono::duration_cast<chrono::microseconds>(end1 - start1).count() << endl;
+	cout << "The End" << endl;
 
 
 	system("pause");
