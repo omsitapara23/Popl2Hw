@@ -48,6 +48,7 @@ int main() {
 	
 
 	cout << "Time for parallel  :" << chrono::duration_cast<chrono::microseconds>(end1 - start1).count() << endl;
+	cout << "The End" << endl;
 
 	auto start2 = chrono::steady_clock::now();
 #pragma omp parallel for
