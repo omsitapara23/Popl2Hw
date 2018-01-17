@@ -2,23 +2,28 @@
 #include<thread>
 #include<chrono>
 #include<mutex>
+#include<atomic>
 using namespace std;
 
 std::mutex mx;
 
 int a = 2;
-int y;
+int y, mlock = 0;
+
 
 
 void print_thread(int id) {
 	//mx.lock();
 	cout << endl;
 	cout <<"I am currently thread number id :" << id << endl;
-	a++;
+	//a++;
 	/*if u comment the below cout line then the value of y will be 0 else possibly 6 due to race conditions*/
 	//cout << "value of a = " << a << endl;
-	if (a == 3) {
-
+	if (a == 2 && mlock == 0) {
+		
+		cout << "Generated lock and calculating y for thread id :" << id << endl;
+		mlock = 1;
+		a++;
 		y = a * 2;
 	}
 	/*if (id == 0) {
