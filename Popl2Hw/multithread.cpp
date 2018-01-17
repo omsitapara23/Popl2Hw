@@ -21,7 +21,7 @@ void print_result() {
 }
 
 
-int main() {
+int main_2() {
 
 	for (int i = 0; i < 100; i++) {
 		a[i] = i;

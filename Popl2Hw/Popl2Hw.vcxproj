@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="jointry.cpp" />
+    <ClCompile Include="locksandatomic.cpp" />
     <ClCompile Include="multithread.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
